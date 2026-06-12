@@ -573,12 +573,12 @@
     .map-box {
       width: 100%; aspect-ratio: 4/3;
       border-radius: var(--radius-lg); overflow: hidden;
-      background: linear-gradient(145deg, var(--divider), var(--sage-pale));
-      display: flex; flex-direction: column; align-items: center;
-      justify-content: center; gap: 12px; color: var(--warm-gray);
-      font-size: .86rem; border: 1px solid var(--divider);
+      position: relative;
     }
-    .map-box .map-icon { font-size: 2.5rem; opacity: .5; }
+    .map-box iframe {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%; border: 0;
+    }
     .info-list { display: flex; flex-direction: column; gap: 28px; }
     .info-row {}
     .info-row-label {
@@ -1031,9 +1031,10 @@
   </div>
   <div class="location-wrap">
     <div class="map-box reveal">
-      <span class="map-icon">📍</span>
-      <span>지도 삽입 위치</span>
-      <span style="font-size:.74rem; opacity:.6;">카카오맵 또는 네이버지도 embed</span>
+      <iframe
+        src="https://map.naver.com/p/entry/place/1043075499?embed=true"
+        frameborder="0" allowfullscreen
+        title="랑비앙스 네이버 지도"></iframe>
     </div>
     <div class="info-list reveal reveal-delay-1">
       <div class="info-row">
