@@ -478,6 +478,38 @@
     .node-desc { font-size: .78rem; color: var(--warm-gray); line-height: 1.65; }
 
     /* ════════════════════════════════
+       REVIEWS
+       ════════════════════════════════ */
+    #reviews { background: var(--ivory); }
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .review-card {
+      background: var(--white); border: 1px solid var(--divider);
+      border-radius: var(--radius-md); padding: 26px 24px;
+      display: flex; flex-direction: column; gap: 16px;
+      transition: box-shadow .25s;
+    }
+    .review-card:hover { box-shadow: 0 10px 32px rgba(200,128,106,.1); }
+    .review-quote {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 1.4rem; color: var(--rose); opacity: .5; line-height: 1;
+    }
+    .review-text {
+      font-size: .84rem; color: var(--brown); line-height: 1.85; flex: 1;
+    }
+    .review-footer { display: flex; align-items: center; gap: 12px; padding-top: 12px; border-top: 1px solid var(--divider); }
+    .review-avatar {
+      width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+      background: var(--blush);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .review-who { font-size: .78rem; }
+    .review-who strong { display: block; color: var(--espresso); font-weight: 600; }
+    .review-who span { color: var(--warm-gray); }
+
+    /* ════════════════════════════════
        INSTAGRAM SECTION
        ════════════════════════════════ */
     #insta { background: var(--ivory); }
@@ -663,7 +695,7 @@
       .hero-right { min-height: 55vw; }
       .hero-float-tag { display: none; }
       .about-wrap, .gift-panel, .location-wrap, .insta-wrap { grid-template-columns: 1fr; }
-      .class-grid { grid-template-columns: 1fr; }
+      .class-grid, .reviews-grid { grid-template-columns: 1fr; }
       .products-grid { grid-template-columns: 1fr 1fr; }
       .process-track { grid-template-columns: 1fr 1fr; gap: 32px; }
       .process-track::before { display: none; }
@@ -687,6 +719,7 @@
     <li><a href="#products">제품</a></li>
     <li><a href="#class">클래스</a></li>
     <li><a href="#gift">답례품</a></li>
+    <li><a href="#reviews">후기</a></li>
     <li><a href="#location">오시는 길</a></li>
   </ul>
   <a class="nav-cta" href="#location">문의하기</a>
@@ -716,6 +749,7 @@
       <span class="badge">🎓 원데이클래스</span>
       <span class="badge">🎁 답례품</span>
       <span class="badge">👧 키즈클래스</span>
+      <span class="badge">🏆 KDAA 1급</span>
     </div>
   </div>
   <div class="hero-right">
@@ -729,8 +763,8 @@
       />
     </div>
     <div class="hero-float-tag">
-      <div class="tag-label">Rice Dessert</div>
-      <div class="tag-value">꽃강정 앙금쿠키</div>
+      <div class="tag-label">Signature Product</div>
+      <div class="tag-value">버터떡 · 모나카견과칩</div>
     </div>
     <div class="hero-scroll-hint">
       <div class="scroll-line"></div>
@@ -761,33 +795,34 @@
       <p class="sec-eyebrow reveal">Brand Story</p>
       <h2 class="sec-title reveal">밀가루 없이도<br />이렇게 맛있을 수 있어요</h2>
       <p class="about-lead reveal">
-        "우리 쌀로 만드는 건강한 디저트의 새로운 가능성"
+        "L'ambiance — 프랑스어로 '분위기'. 일상에 따뜻한 분위기를 선물합니다."
       </p>
       <p class="about-body reveal">
-        랑비앙스는 <strong>쌀가루</strong>를 사용해 글루텐 부담 없이 즐길 수 있는<br />
-        쫄깃하고 건강한 디저트를 연구합니다. 꽃강정, 앙금쿠키, 쌀술빵 등<br />
-        눈과 입이 모두 즐거운 한국의 감성 디저트를 선보입니다.
+        랑비앙스는 <strong>한국디저트아트협회(KDAA) 1급</strong> 자격을 바탕으로,
+        우리 <strong>쌀가루</strong>로 만드는 건강한 디저트를 연구합니다.<br />
+        글루텐이 걱정되는 분들께도, 아이에게 건강한 간식을 챙겨주고 싶은 분들께도<br />
+        달콤하고 아름다운 일상을 선물하고 싶었습니다.
       </p>
       <div class="about-pillars">
         <div class="pillar reveal">
           <div class="pillar-icon p1">🌿</div>
           <div class="pillar-text">
-            <h4>건강한 재료</h4>
+            <h4>건강한 우리 쌀</h4>
             <p>밀가루 대신 우리 쌀가루 — 글루텐 부담 없이 즐기는 디저트</p>
           </div>
         </div>
         <div class="pillar reveal reveal-delay-1">
-          <div class="pillar-icon p2">🎨</div>
+          <div class="pillar-icon p2">🏆</div>
           <div class="pillar-text">
-            <h4>감성 가득한 비주얼</h4>
-            <p>꽃강정·앙금쿠키 등 눈으로 먼저 즐기는 아름다운 쌀 디저트</p>
+            <h4>KDAA 1급 공인 자격</h4>
+            <p>한국디저트아트협회 1급 자격으로 검증된 레시피와 기술</p>
           </div>
         </div>
         <div class="pillar reveal reveal-delay-2">
           <div class="pillar-icon p3">🤝</div>
           <div class="pillar-text">
-            <h4>소규모 밀착 수업</h4>
-            <p>1:1 수업 가능, 일정 조율 자유롭게 — 처음 오시는 분도 환영</p>
+            <h4>예산 맞춤 소통</h4>
+            <p>답례품·클래스 모두 예산과 일정 조율 가능 — 부담 없이 문의하세요</p>
           </div>
         </div>
       </div>
@@ -800,71 +835,67 @@
   <div class="sec-header">
     <p class="sec-eyebrow reveal">Products</p>
     <h2 class="sec-title reveal">대표 쌀 디저트</h2>
-    <p class="sec-desc reveal">주문 픽업 또는 배송으로 만나보실 수 있어요. 단체·대량 주문도 가능합니다.</p>
+    <p class="sec-desc reveal">주문 예약 후 공방 픽업으로 만나보세요. 조기품절이 잦으니 미리 예약을 추천드려요.</p>
   </div>
   <div class="products-grid">
     <div class="product-card reveal">
       <div class="product-thumb pt1">
-        <div class="product-thumb-fallback">🍞<span>사진 교체</span></div>
+        <div class="product-thumb-fallback">🍡<span>사진 교체</span></div>
       </div>
       <div class="product-body">
         <span class="product-badge">BEST</span>
-        <div class="product-name">쌀술빵</div>
-        <div class="product-desc">흑임자·단호박·쑥·초코 등 다양한 맛. 촉촉하고 쫄깃한 발효빵의 매력을 쌀로.</div>
+        <div class="product-name">버터떡</div>
+        <div class="product-desc">쫄깃한 쌀 반죽에 녹아드는 고소한 버터풍미. 랑비앙스 시그니처 대표 제품.<br /><span style="font-size:.7rem;color:var(--rose);margin-top:6px;display:block;">✓ 글루텐 걱정되시는 분 · 쫄깃한 식감 좋아하시는 분</span></div>
       </div>
     </div>
     <div class="product-card reveal reveal-delay-1">
       <div class="product-thumb pt2">
-        <img
-          src="http://shop1.phinf.naver.net/20260421_55/17766976806970syca_PNG/26267893080670862_1279901860.png"
-          alt="꽃강정 앙금쿠키 카네이션"
-          onerror="this.style.display='none';"
-        />
+        <div class="product-thumb-fallback">🥮<span>사진 교체</span></div>
       </div>
       <div class="product-body">
         <span class="product-badge">POPULAR</span>
-        <div class="product-name">꽃강정 앙금쿠키</div>
-        <div class="product-desc">바삭한 강정 위에 피어난 앙금꽃. 먹기 아까울 만큼 예쁜 쌀 디저트 선물 세트.</div>
+        <div class="product-name">모나카견과칩</div>
+        <div class="product-desc">바삭한 모나카 웨이퍼에 견과류 듬뿍. 커피 한 잔 옆에 두기 딱 좋은 티타임 간식.<br /><span style="font-size:.7rem;color:var(--rose);margin-top:6px;display:block;">✓ 티타임 간식 · 선물 세트 · 단체 답례품</span></div>
       </div>
     </div>
     <div class="product-card reveal reveal-delay-2">
       <div class="product-thumb pt3">
-        <div class="product-thumb-fallback">🌰<span>사진 교체</span></div>
+        <div class="product-thumb-fallback">🍪<span>사진 교체</span></div>
       </div>
       <div class="product-body">
-        <span class="product-badge">시즌</span>
-        <div class="product-name">쌀호두과자</div>
-        <div class="product-desc">바싹 쫄깃한 식감의 쌀 반죽에 통통한 호두소. 간식으로도 선물로도 딱.</div>
+        <span class="product-badge">시그니처</span>
+        <div class="product-name">꽃두쫀쿠</div>
+        <div class="product-desc">먹기 아까울 만큼 예쁜 꽃 모양 쌀 쿠키. 쫀득한 식감으로 자꾸 손이 가요.<br /><span style="font-size:.7rem;color:var(--rose);margin-top:6px;display:block;">✓ 선물 · 답례품 · 특별한 날</span></div>
       </div>
     </div>
     <div class="product-card reveal">
       <div class="product-thumb pt4">
-        <div class="product-thumb-fallback">🎂<span>사진 교체</span></div>
+        <div class="product-thumb-fallback">🍞<span>사진 교체</span></div>
       </div>
       <div class="product-body">
-        <span class="product-badge">쌀과자</span>
-        <div class="product-name">크리스피강정</div>
-        <div class="product-desc">바삭바삭한 식감이 매력적인 쌀 강정. 모임 간식이나 선물 세트로 인기.</div>
+        <span class="product-badge">베스트</span>
+        <div class="product-name">쌀술빵</div>
+        <div class="product-desc">플레인·흑임자·단호박·쑥·크랜베리 등 다양한 맛. 촉촉하고 쫄깃한 발효빵.<br /><span style="font-size:.7rem;color:var(--rose);margin-top:6px;display:block;">✓ 아침 간식 · 어르신 선물 · 단체 주문</span></div>
       </div>
     </div>
     <div class="product-card reveal reveal-delay-1">
       <div class="product-thumb pt5">
-        <div class="product-thumb-fallback">🍡<span>사진 교체</span></div>
+        <div class="product-thumb-fallback">🎂<span>사진 교체</span></div>
       </div>
       <div class="product-body">
-        <span class="product-badge">쫄깃</span>
-        <div class="product-name">구움찰떡</div>
-        <div class="product-desc">겉은 노릇하게, 속은 촉촉하게 구운 찰떡. 전통 맛을 세련되게.</div>
+        <span class="product-badge">부드러움</span>
+        <div class="product-name">쌀카스테라</div>
+        <div class="product-desc">밀가루 없이 촉촉하고 가벼운 식감. 부드럽게 녹는 쌀 카스테라.<br /><span style="font-size:.7rem;color:var(--rose);margin-top:6px;display:block;">✓ 아이 간식 · 어르신 선물</span></div>
       </div>
     </div>
     <div class="product-card reveal reveal-delay-2">
       <div class="product-thumb pt6">
-        <div class="product-thumb-fallback">🥮<span>사진 교체</span></div>
+        <div class="product-thumb-fallback">🧁<span>사진 교체</span></div>
       </div>
       <div class="product-body">
-        <span class="product-badge">고급</span>
-        <div class="product-name">만주 / 모나카견과칩</div>
-        <div class="product-desc">고급스러운 비주얼의 만주와 견과류 가득 모나카. 특별한 선물에.</div>
+        <span class="product-badge">고소함</span>
+        <div class="product-name">쌀휘낭시에 · 쌀르뱅쿠키</div>
+        <div class="product-desc">고소한 버터향 가득한 쌀 휘낭시에와 담백한 쌀르뱅쿠키. 티타임의 완성.<br /><span style="font-size:.7rem;color:var(--rose);margin-top:6px;display:block;">✓ 카페 감성 티타임 · 소량 답례품</span></div>
       </div>
     </div>
   </div>
@@ -935,14 +966,15 @@
       <p class="gift-desc">
         돌잔치, 결혼식, 기업 행사, 어버이날…<br />
         특별한 날에 어울리는 쌀 디저트 선물 세트를<br />
-        맞춤 제작해드립니다. 예산과 수량에 맞게 조율해요.
+        맞춤 제작해드립니다. <strong style="color:rgba(255,255,255,.9);">예산을 말씀해 주시면 그에 맞는 구성을 제안드려요.</strong>
       </p>
-      <div class="gift-tags">
+      <div class="gift-tags" style="margin-bottom:28px;">
         <span class="gift-tag">소량 주문 가능</span>
         <span class="gift-tag">대량 단체 주문</span>
-        <span class="gift-tag">맞춤 구성</span>
-        <span class="gift-tag">픽업·배송</span>
+        <span class="gift-tag">예산 맞춤 구성</span>
+        <span class="gift-tag">픽업 전용</span>
       </div>
+      <a class="btn-primary" href="#location" style="display:inline-block;">답례품 문의하기</a>
     </div>
     <div class="occasions-grid">
       <div class="occasion"><div class="oc-icon">👶</div><div class="oc-name">돌잔치<br />답례품</div></div>
@@ -959,6 +991,10 @@
     <p class="sec-eyebrow reveal">How to Order</p>
     <h2 class="sec-title reveal">주문 방법</h2>
     <p class="sec-desc reveal">카카오채널 또는 인스타그램 DM으로 간편하게 문의하세요.</p>
+    <div class="reveal" style="margin-top:20px;background:var(--rose-pale);border:1px solid var(--rose);border-radius:var(--radius-sm);padding:12px 18px;display:inline-flex;align-items:center;gap:10px;font-size:.82rem;color:var(--brown);">
+      <span>⚠️</span>
+      <span><strong>당일 판매분은 조기품절 될 수 있습니다.</strong> 원하시는 날짜 최소 2~3일 전 예약을 추천드려요.</span>
+    </div>
   </div>
   <div class="process-track">
     <div class="process-node reveal">
@@ -984,12 +1020,68 @@
   </div>
 </section>
 
+<!-- ══════════════ REVIEWS ══════════════ -->
+<section id="reviews">
+  <div class="sec-header">
+    <p class="sec-eyebrow reveal">Reviews</p>
+    <h2 class="sec-title reveal">랑비앙스를 먼저 경험한<br />분들의 이야기</h2>
+    <p class="sec-desc reveal">"작은 선물 하나에, 보내는 분의 마음이 담깁니다."</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-quote">"</div>
+      <div class="review-text">
+        육아휴직 앞두고 팀원들한테 뭔가 작지만 특별한 걸 주고 싶었어요.
+        카카오채널로 문의했더니 예산 말하니까 바로 딱 맞는 구성 제안해 주셨어요.
+        모나카견과칩 받은 팀원들이 커피 마실 때마다 꺼내 먹는다고 연락 왔어요.
+      </div>
+      <div class="review-footer">
+        <div class="review-avatar">🍀</div>
+        <div class="review-who">
+          <strong>직장인 M님</strong>
+          <span>모나카견과칩 단체 선물</span>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal reveal-delay-1">
+      <div class="review-quote">"</div>
+      <div class="review-text">
+        교회 어르신들 드시기 좋은 걸 찾다가 쌀술빵을 알게 됐어요.
+        밀가루 안 들어간다고 하니까 속 편하다고 너무 좋아하세요.
+        흑임자, 단호박 다양하게 섞어서 주문했는데 포장도 너무 예쁘게 해주셨어요.
+      </div>
+      <div class="review-footer">
+        <div class="review-avatar">🙏</div>
+        <div class="review-who">
+          <strong>교회 총무 J님</strong>
+          <span>쌀술빵 단체 주문</span>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal reveal-delay-2">
+      <div class="review-quote">"</div>
+      <div class="review-text">
+        아이가 하원하고 오면 간식 챙겨주기 바빴는데, 쌀로 만들어서
+        속 편하게 먹일 수 있어서 좋아요. 버터떡은 저도 하나씩 같이 먹게 돼요.
+        한 번 먹으면 자꾸 손이 가는 맛이에요.
+      </div>
+      <div class="review-footer">
+        <div class="review-avatar">👧</div>
+        <div class="review-who">
+          <strong>학부모 K님</strong>
+          <span>버터떡 정기 주문</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════ INSTAGRAM ══════════════ -->
 <section id="insta">
   <div class="sec-header">
     <p class="sec-eyebrow reveal">Instagram</p>
     <h2 class="sec-title reveal">랑비앙스 피드</h2>
-    <p class="sec-desc reveal">매일 새로운 쌀 디저트 이야기를 인스타그램에 올리고 있어요.</p>
+    <p class="sec-desc reveal">매주 새로운 라인업 공지와 쌀 디저트 이야기를 인스타그램에서 먼저 확인하세요.</p>
   </div>
   <div class="insta-wrap">
     <div class="insta-grid-wrap reveal">
@@ -1072,9 +1164,14 @@
         <div class="info-row-sub">토요일·일요일 휴무</div>
       </div>
       <div class="info-row">
+        <div class="info-row-label">전화 문의</div>
+        <div class="info-row-val">010-5128-7290</div>
+        <div class="info-row-sub">카카오채널 또는 인스타 DM도 편하게 이용하세요</div>
+      </div>
+      <div class="info-row">
         <div class="info-row-label">문의 채널</div>
         <div class="contact-row">
-          <a class="ch-btn kakao" href="#" target="_blank">💬 카카오채널</a>
+          <a class="ch-btn kakao" href="https://pf.kakao.com/_xljambiance" target="_blank">💬 카카오채널 '랑비앙스'</a>
           <a class="ch-btn insta" href="https://www.instagram.com/_l.ambiance_" target="_blank">📷 인스타그램</a>
           <a class="ch-btn blog" href="https://blog.naver.com/lambiance_" target="_blank">📝 네이버블로그</a>
         </div>
@@ -1102,7 +1199,8 @@
       </div>
       <div class="footer-meta">
         인천광역시 계양구 도두리로 58, 상가동 2층 203호<br />
-        평일 10:00 – 18:00 &nbsp;|&nbsp; 토·일 휴무
+        평일 10:00 – 18:00 &nbsp;|&nbsp; 토·일 휴무<br />
+        📞 010-5128-7290
       </div>
     </div>
     <div class="footer-right">
